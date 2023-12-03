@@ -37,7 +37,7 @@ function Navbar(){
         <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-zinc-700 px-3 py-2 text-sm ring-1 ring-inset ring-zinc-700 hover:bg-zinc-800">
             <IoBagSharp className='-mr-1 h-5 w-5'/> Productos
           
-          <IoChevronDownSharp className='-mr-1 h-1 w-5' aria-hidden="true"/>
+          <IoChevronDownSharp className='-mr-1 h-5 w-5' aria-hidden="true"/>
         </Menu.Button>
       </div>
 
