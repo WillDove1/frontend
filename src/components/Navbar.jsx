@@ -26,9 +26,10 @@ function Navbar(){
                     isAuthenticated ? (
                         <>
                             <li>
-                                <div className='flex mx-3 px-3'>
-                                    <IoPerson size={30}/>{user.username}
-                                </div>
+                              <Link to='/profile' className='flex mx-3 px-3'>
+                                <IoPerson size={30}/>{user.username}
+                              </Link>
+
                             </li>
                             <li>
 
