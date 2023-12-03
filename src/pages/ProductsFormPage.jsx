@@ -34,6 +34,7 @@ function ProductsFormPage() {
     const onSubmit = handleSubmit( (data)=>{
         if(params.id){
             updateProduct(params.id, data);
+            console.log(data);
         }else{
             createProduct(data);
         }
