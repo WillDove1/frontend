@@ -31,12 +31,6 @@ function Navbar(){
                                 </div>
                             </li>
                             <li>
-                                <Link to='/add-product' 
-                                className='bg-zinc-500 rounded-sm'
-                                > <IoAddCircle size={30}/>
-                                </Link>
-                            </li>
-                            <li>
 
                             <Menu as="div" className="relative inline-block text-left">
       <div>
