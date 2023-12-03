@@ -90,7 +90,7 @@ function Navbar(){
             <Menu.Item>
               {({ active }) => (
                 <Link
-                  href="/logout"
+                  to="/logout"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -104,11 +104,6 @@ function Navbar(){
         </Menu.Items>
       </Transition>
     </Menu>
-
-                                <Link to='/' onClick={()=>{logout()}} 
-                                className='bg-zinc-500  rounded-sm'>
-                                    <IoLogOut size={30}/>
-                                </Link>
                             </li>
                         
                         </>
