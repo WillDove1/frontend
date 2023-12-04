@@ -204,15 +204,15 @@ function Navbar(){
                 </Link>
               )}
             </Menu.Item>
-            <Link to='/' onClick={() => { logout() }}
-                  className='bg-zinc-500 rounded-sm'
-                >
-                    <IoLogOut className='h-5 w-5 inline-flex'/> Salir
-            </Link>
           </div>
         </Menu.Items>
       </Transition>
     </Menu>
+    <Link to='/' onClick={() => { logout() }}
+                  as="div" className="relative inline-block text-left"
+                >
+                    <IoLogOut className='h-5 w-5 inline-flex'/> Salir
+    </Link>
                             </li>
                         
                         </>
