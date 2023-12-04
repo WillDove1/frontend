@@ -67,7 +67,7 @@ function ProviersFormPage() {
                     ...register("nameProduct", {required:true})
                 }
             />
-            { errors.name && (
+            { errors.nameProduct && (
                 <div className='text-red-500'>Nombre del producto es requerido</div>
             )}
 
