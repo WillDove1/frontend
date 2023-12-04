@@ -28,10 +28,16 @@ function EmployeeCard({ employee }) {
                 </div>
             </header>
             <p className='text-slate-300 my-2'>
-                {employee.age}
+                Edad: {employee.age}
             </p>
             <p className='text-slate-300 my-2'>
-                {employee.position}
+                Puesto: {employee.position}
+            </p>
+            <p className='text-slate-300 my-2'>
+                Salario: {employee.salary}
+            </p>
+            <p className='text-slate-300 my-2'>
+                Horario: {employee.schedule}
             </p>
         </div>
     );
