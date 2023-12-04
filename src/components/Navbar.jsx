@@ -286,7 +286,6 @@ function Navbar(){
                                     <IoPersonAdd size={30}/>
                                 </Link>
                             </li>
-                        
                         </>
                     )
                 }
