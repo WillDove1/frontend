@@ -23,7 +23,7 @@ function ProviersFormPage() {
             if(params.id){
                 const provider = await getProvider(params.id);
                 setValue('name',provider.name);
-                setValue('nameProduct',provider.nameProduct);
+                setValue('productname',provider.productName);
                 setValue('price',provider.price);
                 
             }
@@ -59,15 +59,15 @@ function ProviersFormPage() {
                 <div className='text-red-500'>Nombre del proveedor es requerido</div>
             )}
 
-            <label htmlFor="nameProduct">Nombre del producto</label>
+            <label htmlFor="productName">Nombre del producto</label>
             <input type="text"
                 className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
                 placeholder='Nombre del producto'
                 {
-                    ...register("nameProduct", {required:true})
+                    ...register("productName", {required:true})
                 }
             />
-            { errors.nameProduct && (
+            { errors.productName && (
                 <div className='text-red-500'>Nombre del producto es requerido</div>
             )}
 
