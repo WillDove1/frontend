@@ -1,6 +1,6 @@
-import {useEffect} from 'react';
-import {useProviders} from '../context/ProvidersContext';
-import {useNavigate} from 'react-router-dom';
+import { useEffect } from 'react';
+import { useProviders } from '../context/ProvidersContext';
+import { useNavigate } from 'react-router-dom';
 import ProviderCard from '../components/ProviderCard';
 
 function ProvidersForm(){
@@ -16,27 +16,26 @@ function ProvidersForm(){
 }
 
 function ProvidersPage() {
-    const {getProviders, providers} = useProviders();
+    const { getProviders, providers } = useProviders();
 
-    useEffect( ()=>{
+    useEffect(() => {
         getProviders();
-    }, [])
+    }, []);
 
-    if(providers.lenght === 0)
-        return (<h1>No hay proveedores para listar</h1>)
-    
+    if(providers.length === 0) {
+        return <h1>No hay proveedores para listar</h1>;
+    }
+
     return (
-        <div className='grid sm:grid-cols-2 md:grid.cols-3 gap-2'>
+        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-2'>
             {
-                providers.map((provider)=>(
-                    <ProviderCard provider={provider}
-                                key={provider._id}
-
-                    />
-                ))
-            }
+                providers.map((provider) => (
+                <ProviderCard provider={provider} 
+                key={provider._id} 
+                />
+            ))}
         </div>
-    )
+    );
 }
 
-export default ProvidersPage
+export default ProvidersPage;
