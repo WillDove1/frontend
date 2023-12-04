@@ -13,7 +13,7 @@ function HomePage() {
                     <hr className="my-5 h-px border-t-0 bg-transparent bg-gradient-to-t
                         from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100"/>
                     <p className="text-center text-mx">
-                        Derechos reservador JIMR &#9400; 2023
+                        Derechos reservados JIMR & DRRG &#9400; 2023
 
                     </p>
                 </div>
