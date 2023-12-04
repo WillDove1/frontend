@@ -19,7 +19,7 @@ const EmployeesFormPage = () => {
       if (id) {
         const employeeData = await getEmployeeById(id);
         setValue('name', employeeData.name);
-        setValue('salay', employeeData.salary);
+        setValue('salary', employeeData.salary);
         setValue('age', employeeData.age);
         setValue('position', employeeData.position);
         setValue('schedule', employeeData.schedule);
