@@ -44,7 +44,7 @@ function Navbar(){
                 <h1 className='text-2xl font-bold'>{getTitle()}</h1>
             
             </Link>
-            <ul className='flex gap-x-2 items start'>
+            <ul className='flex gap-x-2'>
                 {
                     isAuthenticated ? (
                         <>
@@ -104,20 +104,7 @@ function Navbar(){
             </Menu.Item>
           </div>
           
-          <div className="py-1">
-            <Menu.Item>
-              {({ active }) => (
-                <Link to='/' onClick={() => { logout() }}
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                    <IoLogOut className='h-5 w-5 inline-flex'/> Salir
-                </Link>
-              )}
-            </Menu.Item>
-          </div>
+          
         </Menu.Items>
       </Transition>
     </Menu>
@@ -217,6 +204,11 @@ function Navbar(){
                 </Link>
               )}
             </Menu.Item>
+            <Link to='/' onClick={() => { logout() }}
+                  className='bg-zinc-500 rounded-sm'
+                >
+                    <IoLogOut className='h-5 w-5 inline-flex'/> Salir
+            </Link>
           </div>
         </Menu.Items>
       </Transition>
