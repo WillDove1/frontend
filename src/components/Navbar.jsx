@@ -209,7 +209,7 @@ function Navbar(){
       </Transition>
     </Menu>
     <Link to='/' onClick={() => { logout() }}
-                  as="div" className="relative inline-block text-left"
+                  as="div" className="relative inline-block text-left" style="margin-right: 40px;"
                 >
                     <IoLogOut className='h-5 w-5 inline-flex'/> Salir
     </Link>
