@@ -31,7 +31,7 @@ function Navbar(){
       }else if (path.includes('profile')){
         return 'Vista de profile';
       } else {
-        return 'Título por defecto';
+        return 'StoreI&E';
       }
     };
 
