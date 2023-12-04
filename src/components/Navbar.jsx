@@ -32,6 +32,12 @@ function Navbar(){
 
                             </li>
                             <li>
+                              <Link to='/provider-add' className='flex mx-3 px-3'>
+                                <IoAddCircle size={30}/>
+                              </Link>
+
+                            </li>
+                            <li>
 
                             <Menu as="div" className="relative inline-block text-left">
       <div>
