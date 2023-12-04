@@ -13,7 +13,7 @@ import NotFound from './pages/NotFound';
 // Importa el nuevo contexto de proveedores
 import { ProvidersProvider } from "./context/ProvidersContext";
 import ProvidersPage from "./pages/ProvidersPage";
-import ProvidersFormPage from "./pages/ProvidersFormPage";
+import ProvidersFormPage from "./pages/ProviersFormPage";
 
 function App() {
   return (
