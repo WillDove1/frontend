@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import {
   createEmployeeRequest,
-  getEmployeeRequest,
+  getEmployeesRequest,
   deleteEmployeeRequest,
   getEmployeeRequest,
   updateEmployeeRequest
