@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom'
 import {useAuth} from '../context/AuthContext';
 import {IoPersonAdd, IoLogIn, IoAddCircle, IoLogOut, IoPerson, IoChevronDownSharp, IoBagAdd, IoBagSharp, IoChevronDown} from "react-icons/io5";
 
@@ -11,14 +11,35 @@ function classNames(...classes) {
 }
 
 function Navbar(){
+    const location = useLocation();
     const {isAuthenticated, logout, user} = useAuth();
+
+    const getTitle = () => {
+      const path = location.pathname.toLowerCase();
+      if (path.includes('products')) {
+        return 'Productos';
+      } else if (path.includes('providers')) {
+        return 'Proveedores';
+      }else if (path.includes('add-provider')){
+        return 'Añadiendo proveedor';
+      }else if (path.includes('add-product')){
+        return 'Añadiendo producto';
+      } else if (path.includes('employees')) {
+        return 'Empleados';
+      }else if (path.includes('add-employee')){
+        return 'Añadiendo empleado';
+      } else {
+        return 'Título por defecto';
+      }
+    };
+
     return(
         <nav className='bg-zinc-700 my-3 flex justify-between items-start py-5 px-10 rounden-lg'>
             <Link to={
                 isAuthenticated ? '/products' : '/'}
                 
             >
-                <h1 className='text-2xl font-bold'>Productos</h1>
+                <h1 className='text-2xl font-bold'>{getTitle()}</h1>
             
             </Link>
             <ul className='flex gap-x-2'>
