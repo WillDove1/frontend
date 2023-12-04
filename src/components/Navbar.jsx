@@ -28,6 +28,8 @@ function Navbar(){
         return 'Empleados';
       }else if (path.includes('add-employee')){
         return 'Añadiendo empleado';
+      }else if (path.includes('profile')){
+        return 'Vista de profile';
       } else {
         return 'Título por defecto';
       }
