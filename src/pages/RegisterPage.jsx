@@ -3,12 +3,10 @@ import { useAuth } from '../context/AuthContext';
 import { useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { IoPersonAdd, IoLogIn } from 'react-icons/io5';
-import ReCaptcha from 'react-google-recaptcha';
 
 function RegisterPage(){
     const {register, handleSubmit, formState:{errors}} = useForm();
     const {signup, isAuthenticated, errors:registerErrors} = useAuth();
-    const [captchaValue, setCaptchaValue] = useState(null)
     const navigate = useNavigate();
 
     useEffect( () => {
@@ -76,16 +74,13 @@ function RegisterPage(){
                     )}
                     
                     <button className='bg-zinc-700 px-3 py-3 my-3 rounded-md' 
-                    type="submit"
-                    ><IoPersonAdd size={30}/></button>
-                    
+                    type="submit"><IoPersonAdd size={30}/></button>
                     <p className='flex gap-x-2 justify-between pt-5 mt-5'>
                         ¿Ya tienes una cuenta?
                         <Link to="/login" className='text-sky-500'>
                             ¡Inicia Sesión! <IoLogIn size={30} className='mx-1'/>
                         </Link>
                     </p>
-                    
                 </form>
             </div>
         </div>
