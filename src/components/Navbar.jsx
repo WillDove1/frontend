@@ -1,6 +1,8 @@
 import {Link, useLocation} from 'react-router-dom'
 import {useAuth} from '../context/AuthContext';
 import {IoPersonAdd, IoLogIn, IoAddCircle, IoLogOut, IoPerson, IoChevronDownSharp, IoBagAdd, IoBagSharp, IoChevronDown} from "react-icons/io5";
+import { FaPeopleCarryBox } from "react-icons/fa6";
+import { IoIosPeople } from "react-icons/io";
 
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
@@ -112,7 +114,7 @@ function Navbar(){
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-zinc-700 px-3 py-2 text-sm ring-1 ring-inset ring-zinc-700 hover:bg-zinc-800">
-          Proveedores
+          <FaPeopleCarryBox className='-mr-1 h-5 w-5'/>Proveedores
           <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
         </Menu.Button>
       </div>
@@ -162,7 +164,7 @@ function Navbar(){
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-zinc-700 px-3 py-2 text-sm ring-1 ring-inset ring-zinc-700 hover:bg-zinc-800">
-          Empleados
+          <IoIosPeople className='-mr-1 h-5 w-5'/>Empleados
           <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
         </Menu.Button>
       </div>
