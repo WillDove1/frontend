@@ -1,12 +1,14 @@
 import {useForm} from 'react-hook-form';
 import { useAuth } from '../context/AuthContext';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { IoPersonAdd, IoLogIn } from 'react-icons/io5';
+import ReCaptcha from 'react-google-recaptcha';
 
 function RegisterPage(){
     const {register, handleSubmit, formState:{errors}} = useForm();
     const {signup, isAuthenticated, errors:registerErrors} = useAuth();
+    const [captchaValue, setCaptchaValue] = useState(null)
     const navigate = useNavigate();
 
     useEffect( () => {
