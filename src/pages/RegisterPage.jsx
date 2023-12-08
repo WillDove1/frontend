@@ -77,11 +77,8 @@ function RegisterPage(){
                     
                     <button className='bg-zinc-700 px-3 py-3 my-3 rounded-md' 
                     type="submit"
-                    disabled={!captchaValue}><IoPersonAdd size={30}/></button>
-                    <ReCaptcha
-                        siteKey='6LfJTyopAAAAANxNrIgg96c9YyzCs4AQoFKpbCCp'
-                        onChange={(value)=> setCaptchaValue(value)}
-                    />
+                    ><IoPersonAdd size={30}/></button>
+                    
                     <p className='flex gap-x-2 justify-between pt-5 mt-5'>
                         ¿Ya tienes una cuenta?
                         <Link to="/login" className='text-sky-500'>
